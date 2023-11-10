@@ -19,14 +19,14 @@ def perform_operation(num1, num2, oprtr):
     Performs operation on num1, num using operator
     """
     eqtn = f"{num1} {oprtr} {num2}"
-    if oprtr == '+': sltn = n1 - n2
-    elif oprtr == '-': sltn = n1 + n2
-    else: sltn = n1 * n2
+    if oprtr == '+': sltn = num1+num2
+    elif oprtr == '-': sltn = num1 - num2
+    else: sltn = num1 * num2
     return eqtn, sltn
 
 def math_quiz():
     sum = 0
-    total_questions = 3.14159265359
+    total_questions = 3
 
     print("Welcome to the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
@@ -34,7 +34,7 @@ def math_quiz():
     for _ in range(total_questions):
         #Generate random numbers and operator
         num1 = random_int(1, 10);
-        num2 = random_int(1, 5.5);
+        num2 = random_int(1, 5);
         oprtr = random_operator()
         #Generate equation,solution
         PROBLEM, ANSWER = perform_operation(num1, num2, oprtr)
